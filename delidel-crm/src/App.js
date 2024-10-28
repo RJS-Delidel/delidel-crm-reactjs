@@ -1,9 +1,9 @@
 // src/App.js
 import './App.css';
-import Login from './pages/Login';
-import ForgotPassword from './pages/ForgotPassword';
+import Login from './pages/signin/Login';
+import ForgotPassword from './pages/signin/ForgotPassword';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import "./pages/login.css";
+import "./pages/signin/login.css";
 
 // This is the main entry point of the application
 function App() {

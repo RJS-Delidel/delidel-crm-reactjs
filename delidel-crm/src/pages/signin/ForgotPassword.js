@@ -1,5 +1,6 @@
 // src/pages/ForgotPassword.js
 import React, { useState } from 'react';
+import config from './config.js'; // Import the config file correctly
 import axios from 'axios';
 
 const ForgotPassword = () => {
@@ -9,7 +10,8 @@ const ForgotPassword = () => {
   const handleForgotPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/forgot-password', { username });
+      // Use backticks for template literals
+      const response = await axios.post(`${config.apiUrl}/forgot-password`, { username });
       setMessage(response.data.message);
     } catch (err) {
       setMessage('User not found');
