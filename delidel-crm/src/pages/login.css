@@ -6,6 +6,16 @@
 /*-------------------------------------
   1. Common CSS
 --------------------------------------*/
+
+:root {
+    --delidel_orange: #F16422;
+    --border_color: #BFBFBF;
+    --blue-gray-900: #2E2E2E;
+    --white: #FFFFFF;
+    --mid-gray: #838383;
+    --radius-small: 10px;
+    --radius-medium: 30px;
+}
 .companyname {
     gap: var(--space-xs);
     display: flex;
@@ -18,7 +28,7 @@
 }
 
 .dhi-group-1 {
-    background-color: #F16422;
+    background-color:var(--delidel_orange);
     width: 40px;
     height: 16px;
     border-radius: var(--radius-xs);
@@ -107,7 +117,7 @@
 }
 
 .crm {
-    color: #F16422;
+    color: var(--delidel_orange);
 text-align: center;
 font-family: "Nunito Sans";
 font-size: 18px;
@@ -121,14 +131,14 @@ line-height: normal;
     display: flex;
     height: 52px;
     border-radius: 50%;
-    border: 2px solid #F16422;
+    border: 2px solid var(--delidel_orange);
 }
 
 .business {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #F16422;
+    color: var(--delidel_orange);
     text-align: center;
     font-family: "Nunito Sans";
 }
@@ -238,7 +248,7 @@ border: 1px solid #BFBFBF;
 }
 
 .forgot-password{
-    color: var(--Orange, #F16422);
+    color: var(--button_background);
 text-align: right;
 
 /* Nunito Sans  Regular 16pt */

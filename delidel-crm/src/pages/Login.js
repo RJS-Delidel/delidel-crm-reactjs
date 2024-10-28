@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import config from './config.js';
 import logo from '../assets/images/Logo.png'; 
 
 const Login = () => {
@@ -15,16 +16,16 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/login', { username, password });
+            const response = await axios.post(`${config.apiUrl}/login`, { username, password });
             const { token } = response.data;
             localStorage.setItem('token', token);
             if (rememberMe) {
-                localStorage.setItem('username', username); // Save username if remember me is checked
+                localStorage.setItem('username', username);
             } else {
                 localStorage.removeItem('username');
             }
             setError('');
-            navigate('/'); // Redirect to home or dashboard
+            navigate('/');
         } catch (err) {
             setError('Invalid username or password');
         }
